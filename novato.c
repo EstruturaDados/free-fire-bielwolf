@@ -101,7 +101,7 @@ void removerItem(I *lista, int *totalItens, const char *nome) {
     }
 
     if(pos == -1) {
-        printf("Esse item \"%s\" não foi encontrado no seu inventário!\n");
+        printf("Esse item \"%s\" não foi encontrado no seu inventário!\n", nome);
         return;
     }
 
@@ -110,7 +110,7 @@ void removerItem(I *lista, int *totalItens, const char *nome) {
     }
 
     (*totalItens)--;
-    printf("Seu item \"%s\" foi removido com sucesso!\n");
+    printf("Seu item \"%s\" foi removido com sucesso!\n", nome);
 }
 
 void listarItem(I *lista, int *totalItens) {
