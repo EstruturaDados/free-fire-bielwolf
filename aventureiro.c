@@ -297,6 +297,41 @@ int buscarSequencialVetorENC(IED lista, const char *nome, int *comparacoes) {
     return -1;
 }
 
+// //Não acho que seja eficiente, por isso não implementei como opção. 
+// int buscaBinariaInterativaENC(IED lista, const char *nome, int *comparacoes) {
+//     No *atual = lista;
+//     int contador = 0;
+
+//     while (atual != NULL) {
+//         contador++;
+//         atual = atual->proximo;
+//     }
+
+//     int inicio = 0;
+//     int fim = contador - 1;
+//     int meio;
+
+//     while (inicio <= fim){
+//         meio = inicio + (fim - contador) / 2;
+//         atual = lista;
+//         for (int i = 0; i < meio; i++)
+//             atual = atual->proximo;
+        
+//         (*comparacoes)++;
+//         int comparacao = strcmp(atual->dados->nome, nome);
+
+//         if(comparacao == 0) {
+//             return meio;
+//         } else if(comparacao > 0) {
+//             fim = meio - 1;
+//         } else {
+//             inicio = meio + 1;
+//         }
+//     }
+
+//     return -1;
+// }
+
 void ordenarListaENC(IED *lista) {
     if(*lista == NULL || (*lista)->proximo == NULL) return;
     int houveTroca;
